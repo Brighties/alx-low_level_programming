@@ -1,31 +1,43 @@
 #include <stdio.h>
+
 /**
-* main- add multiple of 3 and 5 less than 1024
-*
-* Return: Always 0 (Success)
-*/
+ * main - sums 3-5_cous - Entry point
+ *
+ * Return:  (0)
+ */
+
 int main(void)
 {
-int i;
-int j = 0;
-int k = 0;
-int l = 0;
-for (i = 0; i < 1024; i++)
-{
-if (i % 3 == 0)
-{
-j = j + i;
-}
-if (i % 5 == 0)
-{
-k = k + i;
-}
-if (i % 15 == 0)
-{
-l = l + i;
-}
-}
-printf("%d" ,((k + j) -l));
-printf("\n");
-return (0);
+	int i = 0;
+	int m3 = 3;
+	int m5 = 5;
+	int sum = 0;
+	int lim = 1024;
+
+	while (i == 0)
+	{
+
+		if (m3 < lim)
+		{
+			sum += m3;
+			m3 += 3;
+		}
+
+		if (m5 < lim && (m5 % 3) != 0)
+		{
+			sum += m5;
+			m5 += 5;
+		}
+		else if (m5 % 3 == 0)
+		{
+			m5 += 5;
+		}
+
+		if (m3 >= lim && m5 >= lim)
+		{
+			i = 1;
+		}
+	}
+	printf("%d\n", sum);
+	return (0);
 }
