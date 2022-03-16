@@ -2,7 +2,7 @@
 /**
 * main- add multiple of 3 and 5 less than 1024
 *
-* Return: value 0
+* Return: Always 0 (Success)
 */
 int main(void)
 {
