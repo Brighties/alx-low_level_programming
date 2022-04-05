@@ -1,4 +1,4 @@
-#include "main.h"
+#include "holberton.h"
 #include <stdlib.h>
 
 /**
@@ -37,10 +37,10 @@ char **strtow(char *str)
 			height++;
 	aout = malloc((height + 1) * sizeof(char *));
 	if (aout == NULL || height == 0)
-OAOAOA	{
-OAOAOA		free(aout);
-OAOAOA		return (NULL);
-OAOAOA	}
+	{
+		free(aout);
+		return (NULL);
+	}
 	for (i = a1 = 0; i < height; i++)
 	{
 		for (c = a1; str[c] != '\0'; c++)
@@ -54,14 +54,14 @@ char **strtow(char *str)
 				{
 					ch_free_grid(aout, i);
 					return (NULL);
-OAOAOA				}
+				}
 				break;
-OAOAOA			}
+			}
 		}
 		for (j = 0; a1 <= c; a1++, j++)
 			aout[i][j] = str[a1];
-OAOAOA		aout[i][j] = '\0';
+		aout[i][j] = '\0';
 	}
 	aout[i] = NULL;
 	return (aout);
-OAOAOA}
+}
